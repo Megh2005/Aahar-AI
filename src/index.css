@@ -1,14 +1,14 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
@@ -22,6 +22,7 @@ ul {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
 }
 
 li {
@@ -42,7 +43,8 @@ a:hover {
 }
 
 .no-data {
-  width: 500px;
+  width: 100%;
+  max-width: 500px; /* Ensure no-data image is responsive */
   height: auto;
   display: block;
   margin: auto;
@@ -57,11 +59,52 @@ input {
 button {
   border: 0;
   padding: 10px 30px;
+  border-radius: 35%;
   background: #333333;
   color: white;
+  font-size: 3rem;
+  font-weight: 900;
+  transition: all ease-in-out 200ms;
+}
+
+button:hover {
+  background: red;
+  color: yellow;
 }
 
 .aiWithActive {
-  background: greenyellow;
-  color: #333333;
+  background: rgb(5, 17, 85);
+  color: yellow;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  nav {
+    padding: 8px;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: center; /* Center items in column layout */
+  }
+
+  input {
+    padding: 8px 16px;
+  }
+
+  button {
+    font-size: 2.5rem;
+    padding: 8px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    padding: 6px;
+  }
+
+  button {
+    font-size: 2rem;
+    padding: 6px 20px;
+  }
 }

@@ -1,15 +1,56 @@
-import React from 'react';
+import React from "react";
+import "./About.css";
 
 const About = () => {
   return (
-    <div>
-      <h1>About Our Restaurant</h1>
-      <p className="lead">
-        Welcome to Your Restaurant Name, where we serve delicious and mouthwatering dishes made with the finest ingredients. Our goal is to provide a memorable dining experience for our customers, combining great food, friendly service, and a cozy atmosphere.
-      </p>
-      <p>
-        At Your Restaurant Name, we take pride in our diverse menu that caters to various tastes and preferences. Whether you're a fan of traditional classics or
-      </p>
+    <div className="about-container">
+      <header className="about-header">
+        <h1>About Us</h1>
+      </header>
+      <section className="about-content">
+        <div className="about-text">
+          <h2>Who We Are</h2>
+          <p>
+            We are <span style={{color:"purple"}}>Aahar AI</span> a team of passionate food enthusiasts
+            and tech innovators dedicated to making meal planning and food
+            discovery easy and enjoyable. Our food-suggesting AI leverages
+            advanced algorithms to provide personalized food recommendations
+            based on your tastes, dietary preferences, and nutritional needs.
+          </p>
+        </div>
+        <div className="about-image">
+          <img src="/aahar-logo.png" alt="Food Suggesting AI" />
+        </div>
+      </section>
+      <section className="about-mission">
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to help people discover new foods and make informed
+          choices about their meals. We believe that food is not just about
+          sustenance but also about joy, culture, and community.
+        </p>
+      </section>
+      <section className="about-values">
+        <h2>Our Values</h2>
+        <ul>
+          <li>
+            <strong>Innovation:</strong> Continuously improving our AI to
+            provide the best recommendations.
+          </li>
+          <li>
+            <strong>Health:</strong> Promoting nutritious and balanced meal
+            choices.
+          </li>
+          <li>
+            <strong>Diversity:</strong> Celebrating a wide variety of cuisines
+            from around the world.
+          </li>
+          <li>
+            <strong>Community:</strong> Building a supportive community of food
+            lovers.
+          </li>
+        </ul>
+      </section>
     </div>
   );
 };
