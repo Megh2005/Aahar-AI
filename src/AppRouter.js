@@ -6,12 +6,14 @@ import Home from './pages/Home';
 import AboutMe from './pages/AboutMe';
 import Favorites from './pages/Favorites';
 import MealGenerator from './pages/MealGenerator';
+import Contact from './pages/Contact';
 
 export const routes = [
   { path: '/', name: 'Home', component: <Home /> },
   { path: '/about', name: 'About Us', component: <AboutMe /> },
   { path: '/favorites', name: 'My Favorites', component: <Favorites /> },
   { path: '/meal-generator', name: 'Meal Generator', component: <MealGenerator /> },
+  { path: '/contact-us', name: 'Contact Us', component: <Contact /> },
 ];
 
 const AppRouter = () => {
