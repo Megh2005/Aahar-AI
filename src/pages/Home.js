@@ -19,21 +19,21 @@ const Home = () => {
       <div style={{ margin: "30px 0" }}>
         <button
           onClick={() => handleAiWith("text")}
-          className={aiWith == "text" ? "aiWithActive" : ""}
+          className={aiWith === "text" ? "aiWithActive" : ""}
         >
           Food For Your Mood
         </button>
 
         <button
           style={{ marginLeft: "20px" }}
-          className={aiWith == "image" ? "aiWithActive" : ""}
+          className={aiWith === "image" ? "aiWithActive" : ""}
           onClick={() => handleAiWith("image")}
         >
           What Is In Your Food ?
         </button>
       </div>
 
-      {aiWith == "text" ? <AiwithText /> : <AiwithImage />}
+      {aiWith === "text" ? <AiwithText /> : <AiwithImage />}
     </div>
   );
 };
