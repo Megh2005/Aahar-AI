@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import AiwithText from "../components/AiwithText";
 import AiwithImage from "../components/AiwithImage";
 
-// alert("This Website Is Not For Mobile");
+alert("This Website Is Not For Mobile");
 
 const Home = () => {
   const [aiWith, setLAiWith] = useState("text");
