@@ -21,7 +21,7 @@ const AiwithImage = () => {
     setResponse("");
     const model = genAI.getGenerativeModel({ model: "gemini-pro-vision" });
     const result = await model.generateContent([
-      "What's in this photo? Also write the bad impacts and good impacts for that food given in the photo",
+      "Identify what kind of food items there are in the first image. Then show the nutritional value of the food shown in the image. Tell the history of the food in brief. Don't reply if there is no food in the image. Show the components of the food.",
       imageInineData,
     ]);
     const response = await result.response;
@@ -72,10 +72,10 @@ const AiwithImage = () => {
             Search
           </button>
         </div>
-        <img src={image} style={{ width: "30%", marginTop: 30 }} />
+        <img src={image} alt="" style={{ width: "30%", marginTop: 30 }} />
       </div>
 
-      {loading == true && aiResponse == "" ? (
+      {loading === true && aiResponse === "" ? (
         <p style={{ margin: "30px 0" }}>Loading ...</p>
       ) : (
         <div style={{ margin: "30px 0" }}>

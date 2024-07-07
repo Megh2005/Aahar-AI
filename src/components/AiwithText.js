@@ -11,14 +11,11 @@ const AiwithText = () => {
   const [aiResponse, setResponse] = useState("");
   const [loading, setLoading] = useState(false);
 
-  /**
-   * Generative AI Call to fetch text insights
-   */
   async function aiRun() {
     setLoading(true);
     setResponse("");
     const model = genAI.getGenerativeModel({ model: "gemini-pro" });
-    const prompt = `random meals related to ${search} category with prices in INR.`;
+    const prompt = `Meals related to ${search} with prices in INR. Also show the ingedients of that food. Tell how the food can elevate your mood. Answer in attactive and funny way.`;
     const result = await model.generateContent(prompt);
     const response = await result.response;
     const text = response.text();
@@ -46,7 +43,7 @@ const AiwithText = () => {
         </button>
       </div>
 
-      {loading == true && aiResponse == "" ? (
+      {loading === true && aiResponse === "" ? (
         <p style={{ margin: "30px 0" }}>Loading ...</p>
       ) : (
         <div style={{ margin: "30px 0" }}>
